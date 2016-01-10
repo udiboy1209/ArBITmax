@@ -8,7 +8,7 @@ import com.google.gson.annotations.SerializedName;
 
 public class User {
     @SerializedName("balance")
-    long balance;
+    double balance;
 
     @SerializedName("username")
     String username;
@@ -21,4 +21,6 @@ public class User {
 
     @SerializedName("addresses")
     Address[] addresses;
+
+    double rate;
 }
