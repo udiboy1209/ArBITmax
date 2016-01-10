@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1 BTC ="
+        android:id="@+id/btclabel"
+        android:textSize="30sp"
+        android:padding="10dp"
+        android:background="#567780"
+        android:textColor="#FFF"/>
+    <Spinner
+        android:layout_toRightOf="@id/btclabel"
+        android:layout_alignBottom="@id/btclabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rate_spinner"
+        android:background="#FFF">
+    </Spinner>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/username"
+        android:text="udiboy1209"
+        android:layout_below="@id/btclabel"
+        android:layout_centerHorizontal="true"
+        android:textSize="36sp"
+        android:layout_marginTop="18dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="18dp"
+        android:textColor="#000"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/balance"
+        android:text="Balance: 2 BTC (900 USD)"
+        android:layout_below="@id/username"
+        android:layout_centerHorizontal="true"
+        android:textSize="17sp"
+        android:textColor="#000"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/translabel"
+        android:text="Recent Transactions"
+        android:layout_below="@id/balance"
+        android:textSize="20sp"
+        android:textColor="#000"
+        android:layout_marginTop="22dp"/>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/transactions"
+        android:layout_below="@id/translabel"></ListView>
+
+</RelativeLayout>

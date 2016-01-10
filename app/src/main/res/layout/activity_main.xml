@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:an="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.an.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    an:layout_width="match_parent"
+    an:layout_height="match_parent"
+    tools:context="code.fundo.arbitmax.MainActivity">
+
+    <TextView
+        an:text="Logo Unit"
+        an:id="@+id/logounit"
+        an:layout_width="wrap_content"
+        an:layout_height="wrap_content"
+        an:padding="20dp"/>
+    <android.support.design.widget.TabLayout
+        an:id="@+id/tablayout"
+        an:layout_width="fill_parent"
+        an:layout_height="wrap_content"
+        an:paddingTop="10dp"
+        an:paddingBottom="10dp"
+        an:layout_below="@+id/logounit"
+        app:tabGravity="fill"
+        app:tabTextAppearance="@style/ArBitTabText"
+        app:tabMode="scrollable"
+        app:tabSelectedTextColor="#1b1b1b"
+        app:tabTextColor="#9d9d9d"
+        app:tabIndicatorColor="#0FFF"/>
+
+    <android.support.v4.view.ViewPager
+        an:layout_width="match_parent"
+        an:layout_height="match_parent"
+        an:id="@+id/pager"
+        an:layout_below="@+id/tablayout">
+
+    </android.support.v4.view.ViewPager>
+</RelativeLayout>
