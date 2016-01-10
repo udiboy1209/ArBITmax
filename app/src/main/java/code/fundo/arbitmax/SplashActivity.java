@@ -37,12 +37,28 @@ public class SplashActivity extends BaseActivity {
             @Override
             public void success(Object o, Response response) {
                 BalanceResponse r = (BalanceResponse) o;
+                me.balance = (double)Long.valueOf(r.balance) / 100000000;
 
-                me.balance = Long.valueOf(r.balance);
                 storeUser();
+                Callback callback1 = new Callback() {
+                    @Override
+                    public void success(Object o, Response response) {
+                        dialog.dismiss();
+                        TickerResponse r = (TickerResponse) o;
+                        me.rate = r.arb.last;
+                        storeUser();
+                        startActivity(new Intent(SplashActivity.this, MainActivity.class));
+                        finish();
+                    }
 
-                startActivity(new Intent(SplashActivity.this, MainActivity.class));
-                finish();
+                    @Override
+                    public void failure(RetrofitError error) {
+
+                    }
+                };
+                bcServer.getTicker(callback1);
+                Log.d("yolo", "yolo");
+
             }
 
             @Override

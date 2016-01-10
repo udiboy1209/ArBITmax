@@ -18,12 +18,12 @@ public class BaseActivity extends AppCompatActivity{
     SharedPreferences prefs;
     Gson parser = new Gson();
     RestAdapter ownServerAdapter = new RestAdapter.Builder()
-            .setEndpoint("arbitmaxurl")
+            .setEndpoint("http://10.196.102.7")
             .build();
     BitClient ownServer;
 
     RestAdapter bcServerAdapter = new RestAdapter.Builder()
-            .setEndpoint("bcurl")
+            .setEndpoint("https://www.blockchain.info")
             .build();
     BitClient bcServer;
 

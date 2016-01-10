@@ -41,4 +41,7 @@ public interface BitClient {
 
     @GET("/multiaddr")
     void getTransactions(@Field("active") String address, Callback<TransactionsResponse> cb);
+
+    @GET("/ticker")
+    void getTicker(Callback<TickerResponse> cb);
 }

@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
+import android.widget.TextView;
 
 public class MainActivity extends BaseActivity {
 
@@ -30,6 +31,9 @@ public class MainActivity extends BaseActivity {
         //mViewPager.addOnPageChangeListener(EventsActivity.this);
 
         mTabLayout.setupWithViewPager(mViewPager);
+
+        Log.d("yolo", me.balance + "");
+
     }
 
     class SamplePagerAdapter extends PagerAdapter {
@@ -54,7 +58,10 @@ public class MainActivity extends BaseActivity {
         public Object instantiateItem(ViewGroup container, int position) {
             View view=getLayoutInflater().inflate(pageLayout[position],container,false);
             container.addView(view);
-
+            TextView tv = (TextView) findViewById(R.id.balance);
+            tv.setText("Balance = " + me.balance + " ( "+(me.balance * me.rate) + " USD)");
+            TextView tv2 = (TextView) findViewById(R.id.rate);
+            tv2.setText(me.rate + " USD");
             return view;
         }
 

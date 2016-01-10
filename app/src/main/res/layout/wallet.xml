@@ -12,14 +12,17 @@
         android:padding="10dp"
         android:background="#567780"
         android:textColor="#FFF"/>
-    <Spinner
+
+    <TextView
         android:layout_toRightOf="@id/btclabel"
         android:layout_alignBottom="@id/btclabel"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/rate_spinner"
-        android:background="#FFF">
-    </Spinner>
+        android:layout_height="match_parent"
+        android:id="@+id/rate"
+        android:background="#FFF"
+        android:text= "235"
+        android:textSize="30sp">
+    </TextView>
 
     <TextView
         android:layout_width="wrap_content"
