@@ -7,6 +7,9 @@ package code.fundo.arbitmax;
 import com.google.gson.annotations.SerializedName;
 
 public class User {
+    @SerializedName("balance")
+    long balance;
+
     @SerializedName("username")
     String username;
 
@@ -15,4 +18,7 @@ public class User {
 
     @SerializedName("password")
     String password;
+
+    @SerializedName("addresses")
+    Address[] addresses;
 }

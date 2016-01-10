@@ -38,4 +38,7 @@ public interface BitClient {
                        @Field("from_address") String from,
                        @Field("public_note") String public_note,
                        Callback<SendConfirmation> cb);
+
+    @GET("/multiaddr")
+    void getTransactions(@Field("active") String address, Callback<TransactionsResponse> cb);
 }

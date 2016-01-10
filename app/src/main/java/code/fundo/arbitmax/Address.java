@@ -15,8 +15,4 @@ public class Address {
 
         @SerializedName("label")
         String label;
-
-        @SerializedName("total_received")
-        String total_received;
-
 }
